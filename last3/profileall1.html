@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>User Profiles</title>
+    <style>
+      /* Basic styling for the profile */
+      .profile {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 500px;
+        margin: 0 auto;
+      }
+      .profile h2 {
+        margin-top: 0;
+      }
+      .profile dl {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .profile dt {
+        font-weight: bold;
+      }
+      .profile dd {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    {% for user in users %}
+    <div class="profile">
+      <h2>Profile for {{ user.username }}</h2>
+      <dl>
+        <dt>Name:</dt>
+        <dd>{{ user.first_name }} {{ user.last_name }}</dd>
+        <dt>Email:</dt>
+        <dd>{{ user.email }}</dd>
+        <dt>Phone:</dt>
+        <dd>{{ user.profile.phone }}</dd>
+        <dt>Address:</dt>
+        <dd>{{ user.profile.address }}</dd>
+        <dt>About Me:</dt>
+        <dd>{{ user.profile.about }}</dd>
+      </dl>
+    </div>
+    {% endfor %}
+  </body>
+</html>

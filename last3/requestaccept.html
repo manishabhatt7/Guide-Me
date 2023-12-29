@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="request">
+        <p>You have a pending request from <span id="requester-name"></span>.</p>
+        <button id="accept-button">Accept</button>
+        <button id="decline-button">Decline</button>
+      </div>
+      
+      <script>
+        // Retrieve data from saved form
+        const savedData = JSON.parse(localStorage.getItem('pending-request'));
+        const requesterName = savedData.requesterName;
+        
+        // Update requester name in HTML
+        const requesterNameElement = document.getElementById('requester-name');
+        requesterNameElement.textContent = requesterName;
+        
+        // Handle accept button click
+        const acceptButton = document.getElementById('accept-button');
+        acceptButton.addEventListener('click', () => {
+          // Send accept request to server
+          const requestData = {requesterName, action: 'accept'};
+          // Use fetch or XMLHttpRequest to send requestData to server
+        });
+        
+        // Handle decline button click
+        const declineButton = document.getElementById('decline-button');
+        declineButton.addEventListener('click', () => {
+          // Send decline request to server
+          const requestData = {requesterName, action: 'decline'};
+          // Use fetch or XMLHttpRequest to send requestData to server
+        });
+      </script>
+      
+    
+</body>
+</html>

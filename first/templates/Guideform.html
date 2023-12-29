@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome icones CDN Link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Sign Up</title>
+    <!-- Linking css code file -->
+    {% comment %} <link rel="stylesheet" href="style1.css">
+    {% load static %} {% endcomment %}
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(static/images/mount.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        font-weight: bold;
+      }
+      
+      h2 {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      
+      form {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #ddd;
+        padding: 30px;
+        background-color: gray;
+        font-weight: bold;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="password"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+      
+      textarea {
+        resize: vertical;
+        font-weight: bold;
+      }
+      
+      p {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      
+      a,input[type="submit"] {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+      }
+      
+      a:hover {
+        background-color: #2980b9;
+        font-weight: bold;
+      }
+
+      input[type="submit"] {
+        text-align = center;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #2980b9;
+        font-weight: bold;
+      }
+</style>
+<body>
+    <div>
+        <dive>
+            <h1><center>Sign in</center></h1>
+            <h3><center>Welcome to Guide-Me</center></h3>
+            <form action="#" method="POST" style="width: 200px" >
+            {% csrf_token %}   
+            <div>
+                <p><label for="">Username</label></p>
+                <input type="text" name="username" id="username" required style="display: inline-block;" >
+             </div>
+
+             <div>
+                <p><label for="password">Password</label></p>
+                <input type="password" id="password" name="password" required >
+             </div>
+             <input href='guidedetails.html' type ="submit" value="Sign in">
+             <p>Not a register user? <a href="{% url 'signup' %}">Sign Up</a></p>
+            </form>
+        </dive>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome icones CDN Link -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>guidedetails</title>
+    <!-- Linking css code file -->
+    <link rel="stylesheet" href="stylle2.css">
+</head>
+<style> 
+
+/* Apply a background color to the body */
+body {
+  background-image: url("trek.jpg");
+  background-size: cover;
+  background-position: center;
+    background-color: #355b84;
+}
+
+/* Style the container for the form */
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(52, 114, 184);
+    border-radius: 5px;
+}
+
+/* Style the input fields and labels */
+label, input[type="text"], select, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style the file input field */
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+/* Style the subject textarea */
+textarea {
+    resize: none;
+}
+
+/* Apply a border to the form container */
+.container {
+    border: 1px solid #ccc;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <form method="post">
+      
+          <label for="fname"> Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.."><br>
+
+          <label for="Age">Age:</label><br>
+          <input type="text" id="Age" name="Age"><br>
+
+          <label for="Contact">Contact</label><br>
+          <input type="text" id="Contact" name="Contact"><br>
+          
+
+      
+          <label for="Address">Address</label>
+          <select id="Address" name="Address">
+            <option value="Lumbini">Lumbini</option>
+            <option value="Kathmandu">Kathmandu</option>
+            <option value="Bhaktapur">Bhaktapur</option>
+            <option value="Pokhara">Pokhara</option>
+            <option value="Janakpur">Janakpur</option>
+            <option value="Chitwan">Chitwan</option>
+            <option value="Illam">Illam</option>
+            <option value="Pyuthan">Pyuthan</option>
+            <option value="Baglung">Baglung</option>
+            <option value="Arghakhanchi">Arghakhanchi</option>
+            <option value="Mustang">Mustang</option>
+            <option value="Manang">Manang</option>
+            <option value="Makwanpur">Makwanpur</option>
+             <option value="Gorkha">Gorkha</option>
+              <option value="Taplejung">Taplejung</option>
+            
+          </select><br>
+          <label for="Language">Language</label>
+          <select id="Language" name="Language">
+            <option value="Nepali">Nepali</option>
+            <option value="English">English</option>
+            <option value="Both">Nepali/English</option>
+            </select>
+            <br>
+
+          <label for="gender">   
+            Gender :  
+            </label><br>  
+            <input type="radio" name="male"/> Male <br>  
+            <input type="radio" name="female"/> Female <br>  
+            <input type="radio" name="other"/> Other <br>
+
+            <label for="Price">Price</label><br>
+            <input type="text" id="Price" name="Price"><br>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
+      
+          <input type="submit" hre value="Submit">
+      
+        </form>
+      </div>
+        
+            
+</body>
+</html>

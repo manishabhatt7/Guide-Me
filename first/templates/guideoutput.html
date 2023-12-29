@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 20px;
+              }
+              
+              thead {
+                background-color: #f2f2f2;
+              }
+              
+              th, td {
+                text-align: left;
+                padding: 12px;
+              }
+              
+              th {
+                font-weight: bold;
+              }
+              
+              tr:nth-child(even) {
+                background-color: #f2f2f2;
+              }
+              
+        </style> </head>   
+        <body>
+            <h1>LIST OF AVAILABLE GUIDES</h1><br><br><br>
+        {% for k in my_data  %}
+        <table border="1">
+            <thead>
+                <th>First Name</th>
+                <th>Age</th>
+                <th>Contact</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Price</th>
+                <th>Language</th>
+                <th>Subject</th>
+                
+            </thead>
+            <tr>
+                <td>{{k.firstname}}</td>
+                <td>{{k.age}}</td>
+                <td>{{k.contact}}</td>
+                <td>{{k.gender}}</td>
+                <td>{{k.address}}</td>
+                <td>{{k.price}}</td>
+                <td>{{k.language}}</td>
+                <td>{{k.subject}}</td>
+            
+            </tr>
+            
+            {% endfor %}
+    </body>
+    </html>
